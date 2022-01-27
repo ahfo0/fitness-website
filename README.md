@@ -1,6 +1,6 @@
 # Portfolio : Fitness
 
-220127.netlify.app
+https://220127.netlify.app/
 
 ### 특징
 
