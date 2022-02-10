@@ -321,12 +321,14 @@
                 </ul>
             </div>
         </div>
-        <div id="main7">
-            <div id="map"></div>
-        </div>
     </main>
     <footer>
         <div id="footer_contents">
+            <div id="address">
+                <h2> 오시는 길</h2>
+                <div id="map"></div>
+                <p>서울특별시 중구 을지로2가 88 - X</p>
+            </div>
             <div id="footer_message">
                 <h2>소통을 위한 회원혜택</h2>
                 <p>Community Member benefit</p>
@@ -359,14 +361,16 @@
                 <p>본 사이트는 비상업적 용도의 포트폴리오 사이트입니다.</p>
                 <p>© 2022 <span style="color:#00a8ff">FITNESS</span> All Rights Reserved.</p>
             </div>
-
         </div>
     </footer>
+    <!-- 카카오 지도  API-->
     <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=77ee71774eb5aabbf1277a1bb874daa4"></script>
+    <!-- 카카오 지도 실행 -->
     <script>
 		var container = document.getElementById('map');
 		var options = {
-			center: new kakao.maps.LatLng(33.450701, 126.570667),
+            // 을지로 2가
+			center: new kakao.maps.LatLng(37.5659, 126.9851),
 			level: 3
 		};
 
