@@ -267,10 +267,12 @@ main #main6 #review_button ul{padding:0; list-style:none; width:100%; display:fl
 main #main6 #review_button ul li{width:10px; height:10px; border: 3px solid #fff;  margin: 10px;}
 main #main6 #review_button ul li:nth-child(1){background-color: #fff;}
 main #main6 #review_button ul li:hover{background-color: #fff;}
+main #main7 {position:relative; }
+main #main7 #map{position:absolute; top:6820px; z-index:1000; width:100%; height:500px;}
 footer{position:relative; color:#fff;}
 footer h2{margin-bottom:0}
 footer p{color:rgba(255, 255, 255, 0.5); font-size:16px; font-weight:400; margin-top:10px;}
-footer #footer_contents{position:absolute; top:6820px; width:100%;height:850px; background-image: url("../images/footer_bg.png"); background-repeat: no-repeat; 
+footer #footer_contents{position:absolute; top:7320px; width:100%;height:850px; background-image: url("../images/footer_bg.png"); background-repeat: no-repeat; 
     background-size: cover; display:grid; place-items:center; grid-template-rows: 200px 140px  350px 80px 80px}
 footer #footer_contents #footer_message{padding-top:100px;}
 footer #footer_contents #footer_message h2{font-size:24px; font-weight:500;}

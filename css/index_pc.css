@@ -93,6 +93,8 @@ left:50%;transform:translate(-50%,0);
 main #main6 #review_button{top:3700px; width:100%; height:100px; display:grid; justify-content:center;}
 main #main6 #review div h2{ font-size:24px;}
 main #main6 #review div p{font-size:24px;}
+main #main7{top:3800px; width:100%; height:800px; display:grid; place-items: center; background-color: #ddd;}
+main #main7 #map{position:absolute; top:100px; z-index:1000; width:75%; height:600px;}
 footer #footer_contents{ top:3800px; width:100%;height:600px;grid-template: 100px 120px 100px 100px 100px 80px/1fr 400px 200px 550px 1fr; }
 footer #footer_contents #footer_message{grid-row:2/3; grid-column:2/3; padding:0; display:grid; text-align:left;}
 footer #footer_contents #footer_message h2{font-size:30px;}
