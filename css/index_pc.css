@@ -7,7 +7,7 @@ header div ul li:nth-child(2){padding-left:100px;}
 header div ul li:nth-child(7){background-color: #00a8ff; width:100px; height:50px; line-height:50px;}
 header div ul li:nth-child(7) a{display:grid;}
 header div ul li:nth-child(7):hover{background-color:#3bbafd;}
-header div ul .pc_menu a{color:#fff; text-decoration-line: none; }
+header div ul .pc_menu a{color:#fff; text-decoration-line: none;}
 header div ul #mobile_menu{display:none;}
 main #main1 #main_message p{font-size:30px; font-weight:300;}
 main #main1 #main_message h1{font-size:60px; font-weight:500;}
@@ -34,7 +34,7 @@ main #main3 #main3_info #cross_fit:hover h2{transform: translateY(-110px)}
 main #main3 #main3_info #cross_fit:hover p{ transform:translateY(-20px)}
 main #main3 #main3_info #body_up{width:370px; grid-column:3/4}
 main #main3 #main3_info #body_up #body_up_figure{width:60px; height:60px;}
-main #main3 #main3_info #body_up:hover #body_up_figure{transform: translateY(-110px)}
+main #main3 #main3_info #body_up:hover #body_up_figure{transform: translateY(-90px)}
 main #main3 #main3_info #body_up:hover h2{transform: translateY(-110px)}
 main #main3 #main3_info #body_up:hover p{ transform:translateY(-20px)}
 main #main3 #main3_info #running{width:370px; grid-column:5/6}
@@ -87,21 +87,21 @@ main #main5 #main5_info #body_up_price div:nth-child(2) a{text-decoration-line: 
 main #main5 #main5_info #body_up_price div:nth-child(2):hover a{color:#1da9fc}
 main #main5 #main5_info #body_up_price div:nth-child(3){grid-row:2/3;  grid-column:4/5;}
 main #main5 #main5_info #body_up_price div:nth-child(3) ul{list-style-type:square;font-size:18px; padding-left:30px;text-align:left; padding-top:80px;}
-main #main6 #review {top:3300px; display:grid;height:400px;
-left:50%;transform:translate(-50%,0);
+main #main6{width:100%;top:3300px; overflow:hidden;}
+main #main6 #review { display:grid;height:340px;
 }
-main #main6 #review_button{top:3700px; width:100%; height:100px; display:grid; justify-content:center;}
+main #main6 #review_button{ height:100px; display:grid; justify-content:center;}
 main #main6 #review div h2{ font-size:24px;}
 main #main6 #review div p{font-size:24px;}
-footer #footer_contents{ top:3800px; width:100%;height:900px;grid-template: 30px 130px 130px 310px 130px 100px 80px/1fr 45% 5% 45% 1fr; }
-footer #footer_contents #address{width:100%; height:700px; display:grid; grid-template-rows: 100px 550px 50px; place-items:center; grid-column:2/3; grid-row:2/6;}
+footer #footer_contents{ top:3300px; width:100%;height:600px;grid-template: 30px 75px 150px 100px 150px 150px 45px 30px /1fr 40% 30% 1fr; }
+footer #footer_contents #address{width:100%; height:520px; display:grid; grid-template-rows: 45px 400px 45px; place-items:center; grid-column:2/3; grid-row:3/6}
 footer #footer_contents #address h2{font-size:30px; font-weight:500; margin-top:0;}
-footer #footer_contents #address #map{width:75%; height:550px;}
-footer #footer_contents #footer_message{grid-row:2/3; grid-column:4/5; padding:0; display:grid; text-align:left;}
+footer #footer_contents #address #map{width:100%; height:380px;}
+footer #footer_contents #footer_message{grid-row:2/3; grid-column:3/4; padding:0; display:grid; text-align:left; margin-top:25px;}
 footer #footer_contents #footer_message h2{font-size:30px;}
 footer #footer_contents #footer_message p{font-size:18px; font-weight:400;}
-footer #footer_contents #footer_box{grid-row:3/4; grid-column:4/5;}
-footer #footer_contents #footer_info{grid-row:4/6; grid-column:4/5; display:grid; grid-template-rows:100px 100px 100px; place-items:center;}
+footer #footer_contents #footer_box{grid-row:3/4; grid-column:3/4;}
+footer #footer_contents #footer_info{grid-row:4/6; grid-column:3/4; display:grid; grid-template-rows:100px 100px 100px; place-items:center;}
 footer #footer_contents #footer_info #footer_info1{padding:0; grid-template-columns:6fr 1fr;}
 footer #footer_contents #footer_info #footer_info1 #operation{font-size:30px; grid-column:1/2;}
 footer #footer_contents #footer_info #footer_info1 #animation{grid-column:2/3;}
@@ -111,5 +111,13 @@ footer #footer_contents #footer_info #footer_info2 p{font-size:18px; font-weight
 footer #footer_contents #footer_info #footer_info3{display:grid; grid-template: 30px 40px / 3fr 1fr 1fr; text-align:left; grid-row:3/4; grid-column:1/2; padding:0;}
 footer #footer_contents #footer_info #footer_info3 h2{font-size:30px; grid-column:1/2; grid-row: 2/3; }
 footer #footer_contents #footer_info #footer_info3 p{font-size:18px; font-weight:300;grid-column:1/2; grid-row: 1/2;}
-footer #footer_contents #sns{grid-row:6/7; grid-column:4/5; padding-right:65px;}
-footer #footer_contents #rights{grid-row:6/7; grid-column:2/3;}
+footer #footer_contents #sns{display:none}
+footer #footer_contents #rights{display:none}
+footer #footer_contents_pc{display:grid; height: 200px; grid-template:25px 75px 75px 25px/ 1fr 50% 1fr; background-color:#121212;  place-items:center;position:absolute;top:3900px; width:100%;}
+footer #footer_contents_pc #sns_pc{grid-row: 2/3; grid-column:2/3; width:200px; height:58px; background-color: #00a8ff;}
+footer #footer_contents_pc #sns_pc div{display:grid;}
+footer #footer_contents_pc #sns_pc div:hover{background-color:#3bbafd;}
+footer #footer_contents_pc #sns_pc div a{
+    text-decoration-line: none; color:#fff; height:58px; display:grid;align-items: center; font-size:18px;
+}
+footer #footer_contents_pc #rights_pc{grid-row: 3/4; grid-column:2/3;}

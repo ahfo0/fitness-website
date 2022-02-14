@@ -28,40 +28,26 @@
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="favicon/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
-
     <!-- fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    </script>
     <!-- 기본 css -->
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/index_pc.css" media="screen and (min-width:1200px)">
+    
 </head>
 <body>
-    <!-- 스크롤할때만 작동(최상단 아닐때만) -->
-    <nav>
-        <div>
-            <ul>
-                <li id="logo"><a href="#"><img src="images/logo_Fitness.png" alt="logo"></a></li>
-                <li class="pc_menu"><a href="#">Schedule</a></li>
-                <li class="pc_menu"><a href="#">Program</a></li>
-                <li class="pc_menu"><a href="#">Trainer</a></li>
-                <li class="pc_menu"><a href="#">Price</a></li>
-                <li class="pc_menu"><a href="#">Story</a></li>
-                <li class="pc_menu"><a href="#">Event</a></li>
-                <li id="mobile_menu"><a href="#"><img src="images/menu_mobile.png" alt="mobile_menu"></a></li>
-            </ul>
-        </div>
-    </nav>
     <header>
-        <div>
+        <div id="header">
             <ul>
                 <li id="logo"><a href="#"><img src="images/logo_Fitness.png" alt="logo"></a></li>
-                <li class="pc_menu"><a href="#">Schedule</a></li>
-                <li class="pc_menu"><a href="#">Program</a></li>
-                <li class="pc_menu"><a href="#">Trainer</a></li>
-                <li class="pc_menu"><a href="#">Price</a></li>
-                <li class="pc_menu"><a href="#">Story</a></li>
+                <li class="pc_menu"><a href="#" class="pc_menu_color">Schedule</a></li>
+                <li class="pc_menu"><a href="#" class="pc_menu_color">Program</a></li>
+                <li class="pc_menu"><a href="#" class="pc_menu_color">Trainer</a></li>
+                <li class="pc_menu"><a href="#" class="pc_menu_color">Price</a></li>
+                <li class="pc_menu"><a href="#" class="pc_menu_color">Story</a></li>
                 <li class="pc_menu"><a href="#">Event</a></li>
                 <li id="mobile_menu"><a href="#"><img src="images/menu_mobile.png" alt="mobile_menu"></a></li>
             </ul>
@@ -83,9 +69,9 @@
                         <!-- 버튼부분  (좌우이동) -->
                         <div id="schedule_button">
                             <ul>
-                                <li></li>
-                                <li></li>
-                                <li></li>
+                                <li id="schedule_button1"></li>
+                                <li id="schedule_button2"></li>
+                                <li id="schedule_button3"></li>
                             </ul>
                         </div>
                     </div>
@@ -104,7 +90,6 @@
                                     <span>9:00 - 10:00</span>
                                 </div>
                             </div>
-                            <!-- 일시 숨김처리 -->
                             <div id="schedule_2">
                                 <div>
                                     <span>Cross Fit</span>
@@ -119,7 +104,6 @@
                                     <span>11:30 - 13:00</span>
                                 </div>
                             </div>
-                            <!-- 일시 숨김처리 -->
                             <div id="schedule_3">
                                 <div>
                                     <span>Cross Fit</span>
@@ -152,12 +136,11 @@
                 <div id="customer">
                     <div id="customer_top">
                         <div id=customer_top_left>Customer Satisfaction</div>
-                        <!-- 버튼 추가 -->
                         <div id="customer_button">
                             <ul>
-                                <li></li>
-                                <li></li>
-                                <li></li>
+                                <li id ="customer_button1"></li>
+                                <li id ="customer_button2"></li>
+                                <li id ="customer_button3"></li>
                             </ul>
                         </div>
                     </div>
@@ -166,12 +149,10 @@
                             <div>Anyone who needs a diet comes here</div>
                             <div>Sopia anna</div>
                         </div>
-                        <!-- 일시 숨김처리 -->
                         <div id="customer_2">
                             <div>I love this place</div>
                             <div>Daniel henry</div>
                         </div>
-                        <!-- 일시 숨김처리 -->
                         <div id="customer_3">
                             <div>Our neighborhood movement is right here.</div>
                             <div>Carter finns</div>
@@ -320,9 +301,9 @@
             </div>
             <div id="review_button">
                 <ul>
-                    <li></li>
-                    <li></li>
-                    <li></li>
+                    <li id="review_button1"></li>
+                    <li id="review_button2"></li>
+                    <li id="review_button3"></li>
                 </ul>
             </div>
         </div>
@@ -367,7 +348,123 @@
                 <p>© 2022 <span style="color:#00a8ff">FITNESS</span> All Rights Reserved.</p>
             </div>
         </div>
+        <div id="footer_contents_pc">
+            <div id="sns_pc">
+                <div><a href="https://220207.netlify.app/">포트폴리오 바로 가기</a></div>
+            </div>
+            <div id="rights_pc">
+                <p>본 사이트는 비상업적 용도의 포트폴리오 사이트입니다.</p>
+                <p>© 2022 <span style="color:#00a8ff">FITNESS</span> All Rights Reserved.</p>
+            </div>
+        </div>
     </footer>
+    <!-- 상단 header 스크롤-->
+    <script>  
+            window.addEventListener('scroll',()=>{
+                // console.log('스크롤');
+                if(document.querySelector('html').scrollTop > 0) {
+                    document.querySelector('#header').style.backgroundColor = "#fff";
+                    const pcMenuColor = document.querySelectorAll(".pc_menu_color");
+                    for (let i = 0; i < pcMenuColor.length; i++) {
+                    pcMenuColor[i].style.color = "#989da0";}
+                } else{
+                    document.querySelector('#header').style.backgroundColor = "transparent";
+                    const pcMenuColor = document.querySelectorAll(".pc_menu_color");
+                    for (let i = 0; i < pcMenuColor.length; i++) {
+                    pcMenuColor[i].style.color = "#fff";}  
+                }
+            });
+    </script>
+    <!-- main2 Schedule 버튼 -->
+    <script>
+            schedule_button1.addEventListener('click',()=>{
+                document.querySelector('#schedule_detail').style.transform = "translateX(0%)"; 
+                document.querySelector('#schedule_button1').style.backgroundColor = "#fff";
+                document.querySelector('#schedule_button2').style.backgroundColor = "transparent";
+                document.querySelector('#schedule_button3').style.backgroundColor = "transparent";
+                document.querySelector('#schedule_1').style.visibility ="visible";
+                document.querySelector('#schedule_2').style.visibility ="hidden";
+                document.querySelector('#schedule_3').style.visibility ="hidden";
+            });
+            schedule_button2.addEventListener('click',()=>{
+                document.querySelector('#schedule_detail').style.transform = "translateX(-100%)";
+                document.querySelector('#schedule_button1').style.backgroundColor = "transparent";
+                document.querySelector('#schedule_button2').style.backgroundColor = "#fff";
+                document.querySelector('#schedule_button3').style.backgroundColor = "transparent";
+                document.querySelector('#schedule_1').style.visibility ="hidden";
+                document.querySelector('#schedule_2').style.visibility ="visible";
+                document.querySelector('#schedule_3').style.visibility ="hidden";
+            });   
+            schedule_button3.addEventListener('click',()=>{
+                document.querySelector('#schedule_detail').style.transform = "translateX(-200%)";
+                document.querySelector('#schedule_button1').style.backgroundColor = "transparent";
+                document.querySelector('#schedule_button2').style.backgroundColor = "transparent";
+                document.querySelector('#schedule_button3').style.backgroundColor = "#fff";
+                document.querySelector('#schedule_1').style.visibility ="hidden";
+                document.querySelector('#schedule_2').style.visibility ="hidden";
+                document.querySelector('#schedule_3').style.visibility ="visible";
+            });   
+    </script>
+    <!-- main2 customer 버튼 -->
+    <script>
+        customer_button1.addEventListener('click',()=>{
+            document.querySelector('#customer_detail').style.transform = "translateX(0%)"; 
+            document.querySelector('#customer_button1').style.backgroundColor = "#fff";
+            document.querySelector('#customer_button2').style.backgroundColor = "transparent";
+            document.querySelector('#customer_button3').style.backgroundColor = "transparent";
+            document.querySelector('#customer_1').style.visibility ="visible";
+            document.querySelector('#customer_2').style.visibility ="hidden";
+            document.querySelector('#customer_3').style.visibility ="hidden";
+        });
+        customer_button2.addEventListener('click',()=>{
+            document.querySelector('#customer_detail').style.transform = "translateX(-100%)";
+            document.querySelector('#customer_button1').style.backgroundColor = "transparent";
+            document.querySelector('#customer_button2').style.backgroundColor = "#fff";
+            document.querySelector('#customer_button3').style.backgroundColor = "transparent";
+            document.querySelector('#customer_1').style.visibility ="hidden";
+            document.querySelector('#customer_2').style.visibility ="visible";
+            document.querySelector('#customer_3').style.visibility ="hidden";
+        });   
+        customer_button3.addEventListener('click',()=>{
+            document.querySelector('#customer_detail').style.transform = "translateX(-200%)";
+            document.querySelector('#customer_button1').style.backgroundColor = "transparent";
+            document.querySelector('#customer_button2').style.backgroundColor = "transparent";
+            document.querySelector('#customer_button3').style.backgroundColor = "#fff";
+            document.querySelector('#customer_1').style.visibility ="hidden";
+            document.querySelector('#customer_2').style.visibility ="hidden";
+            document.querySelector('#customer_3').style.visibility ="visible";
+        });   
+    </script>
+    <!-- main6 review 버튼 -->
+    <script>
+        review_button1.addEventListener('click',()=>{
+            document.querySelector('#review').style.transform = "translateX(0%)"; 
+            document.querySelector('#review_button1').style.backgroundColor = "#fff";
+            document.querySelector('#review_button2').style.backgroundColor = "transparent";
+            document.querySelector('#review_button3').style.backgroundColor = "transparent";
+            document.querySelector('#review1').style.visibility ="visible";
+            document.querySelector('#review2').style.visibility ="hidden";
+            document.querySelector('#review3').style.visibility ="hidden";
+        });
+        review_button2.addEventListener('click',()=>{
+            document.querySelector('#review').style.transform = "translateX(-100%)";
+            document.querySelector('#review_button1').style.backgroundColor = "transparent";
+            document.querySelector('#review_button2').style.backgroundColor = "#fff";
+            document.querySelector('#review_button3').style.backgroundColor = "transparent";
+            document.querySelector('#review1').style.visibility ="hidden";
+            document.querySelector('#review2').style.visibility ="visible";
+            document.querySelector('#review3').style.visibility ="hidden";
+        });   
+        review_button3.addEventListener('click',()=>{
+            document.querySelector('#review').style.transform = "translateX(-200%)";
+            document.querySelector('#review_button1').style.backgroundColor = "transparent";
+            document.querySelector('#review_button2').style.backgroundColor = "transparent";
+            document.querySelector('#review_button3').style.backgroundColor = "#fff";
+            document.querySelector('#review1').style.visibility ="hidden";
+            document.querySelector('#review2').style.visibility ="hidden";
+            document.querySelector('#review3').style.visibility ="visible";
+        });   
+    </script>
     <!-- 카카오 지도  API-->
     <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=77ee71774eb5aabbf1277a1bb874daa4"></script>
     <!-- 카카오 지도 실행 -->
