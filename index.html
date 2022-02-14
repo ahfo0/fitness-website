@@ -33,6 +33,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     </script>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.4.1.js"   
+    integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="   
+    crossorigin="anonymous">
+    </script>
     <!-- 기본 css -->
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/index_pc.css" media="screen and (min-width:1200px)">
@@ -41,8 +46,8 @@
 <body>
     <header>
         <div id="header">
-            <ul>
-                <li id="logo"><a href="#"><img src="images/logo_Fitness.png" alt="logo"></a></li>
+            <ul id="header_menu">
+                <li id="logo"><a href="#"></a></li>
                 <li class="pc_menu"><a href="#" class="pc_menu_color">Schedule</a></li>
                 <li class="pc_menu"><a href="#" class="pc_menu_color">Program</a></li>
                 <li class="pc_menu"><a href="#" class="pc_menu_color">Trainer</a></li>
@@ -57,7 +62,8 @@
         <div id="main1">
             <div id="main_message">
                 <p>Fitness Promotion Responsiveweb.</p>
-                <h1>GRUOP_Fitness OPEN</h1>
+                <p class="typing-txt">GRUOP_Fitness OPEN </p>
+                <p class="typing"></p> 
             </div>
         </div>
         <div id="main2">
@@ -360,20 +366,61 @@
     </footer>
     <!-- 상단 header 스크롤-->
     <script>  
-            window.addEventListener('scroll',()=>{
-                // console.log('스크롤');
-                if(document.querySelector('html').scrollTop > 0) {
-                    document.querySelector('#header').style.backgroundColor = "#fff";
-                    const pcMenuColor = document.querySelectorAll(".pc_menu_color");
-                    for (let i = 0; i < pcMenuColor.length; i++) {
-                    pcMenuColor[i].style.color = "#989da0";}
-                } else{
-                    document.querySelector('#header').style.backgroundColor = "transparent";
-                    const pcMenuColor = document.querySelectorAll(".pc_menu_color");
-                    for (let i = 0; i < pcMenuColor.length; i++) {
-                    pcMenuColor[i].style.color = "#fff";}  
-                }
+    document.querySelector('#logo').style.background = "url(images/logo_Fitness.png) no-repeat";
+    document.querySelector('#logo').style.backgroundSize ="cover";
+    window.addEventListener('scroll',()=>{
+    // console.log('스크롤');
+    if(document.querySelector('html').scrollTop > 0) {
+        document.querySelector('#header').style.backgroundColor = "#fff";
+        document.querySelector('#header_menu').style.margin = "15px auto";
+        document.querySelector('#logo').style.width = "140px";
+        document.querySelector('#logo').style.height = "30px";
+        document.querySelector('#logo').style.background = "url(images/logo_Fitness.png) no-repeat";
+        document.querySelector('#logo').style.backgroundSize ="cover";
+
+        const pcMenuColor = document.querySelectorAll(".pc_menu_color");
+        for (let i = 0; i < pcMenuColor.length; i++) {
+        pcMenuColor[i].style.color = "#989da0";}
+        } else{
+        document.querySelector('#header').style.backgroundColor = "transparent";
+        document.querySelector('#header_menu').style.margin = "50px auto";
+        document.querySelector('#logo').style.width = "212px";
+        document.querySelector('#logo').style.height = "46px";
+        document.querySelector('#logo').style.background = "url(images/logo_Fitness.png) no-repeat";
+        document.querySelector('#logo').style.backgroundSize ="cover";
+        const pcMenuColor = document.querySelectorAll(".pc_menu_color");
+        for (let i = 0; i < pcMenuColor.length; i++) {
+        pcMenuColor[i].style.color = "#fff";}  
+        }
             });
+    </script>
+    <!-- main1 h1 타이핑 jQuery-->
+    <script>
+        var typingBool = false; 
+        var typingIdx=0; 
+
+        // 타이핑될 텍스트를 가져온다 
+        var typingTxt = $(".typing-txt").text(); 
+
+        typingTxt=typingTxt.split(""); // 한글자씩 자른다. 
+
+        if(typingBool==false){ 
+        // 타이핑이 진행되지 않았다면 
+        typingBool=true;     
+        var tyInt = setInterval(typing,100); // 반복동작 
+        } 
+            
+        function typing(){ 
+        if(typingIdx<typingTxt.length){ 
+            // 타이핑될 텍스트 길이만큼 반복 
+            $(".typing").append(typingTxt[typingIdx]);
+            // 한글자씩 이어준다. 
+            typingIdx++; 
+        } else{ 
+            //끝나면 반복종료 
+            clearInterval(tyInt); 
+        } 
+}  
     </script>
     <!-- main2 Schedule 버튼 -->
     <script>

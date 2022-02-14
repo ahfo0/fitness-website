@@ -9,8 +9,8 @@ header div ul li:nth-child(7) a{display:grid;}
 header div ul li:nth-child(7):hover{background-color:#3bbafd;}
 header div ul .pc_menu a{color:#fff; text-decoration-line: none;}
 header div ul #mobile_menu{display:none;}
-main #main1 #main_message p{font-size:30px; font-weight:300;}
-main #main1 #main_message h1{font-size:60px; font-weight:500;}
+main #main1 #main_message p:nth-child(1){font-size:30px; font-weight:300;}
+main #main1 #main_message p:nth-child(3){font-size:60px; font-weight:500;}
 main #main2 #main2_info {position:absolute; top:-300px;display:grid; width: 1170px; height:350px; grid-template-columns:1fr 30px 1fr 30px 1fr;  justify-content: space-around;}
 main #main2 #main2_info #schedule{ width: 380px; grid-column:1/2
 
