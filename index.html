@@ -47,17 +47,30 @@
     <header>
         <div id="header">
             <ul id="header_menu">
-                <li id="logo"><a href="#"></a></li>
-                <li class="pc_menu"><a href="#" class="pc_menu_color">Schedule</a></li>
-                <li class="pc_menu"><a href="#" class="pc_menu_color">Program</a></li>
-                <li class="pc_menu"><a href="#" class="pc_menu_color">Trainer</a></li>
-                <li class="pc_menu"><a href="#" class="pc_menu_color">Price</a></li>
-                <li class="pc_menu"><a href="#" class="pc_menu_color">Story</a></li>
+                <li id="logo"><a id="home"></a></li>
+                <li class="pc_menu"><a href="#" class="pc_menu_color" id="go_schedule_pc">Schedule</a></li>
+                <li class="pc_menu"><a href="#" class="pc_menu_color" id="go_program_pc">Program</a></li>
+                <li class="pc_menu"><a href="#" class="pc_menu_color" id="go_trainer_pc">Trainer</a></li>
+                <li class="pc_menu"><a href="#" class="pc_menu_color" id="go_price_pc">Price</a></li>
+                <li class="pc_menu"><a href="#" class="pc_menu_color" id="go_story_pc">Story</a></li>
                 <li class="pc_menu"><a href="#">Event</a></li>
-                <li id="mobile_menu"><a href="#"><img src="images/menu_mobile.png" alt="mobile_menu"></a></li>
+                <li id="mobile_menu"><a><img src="images/menu_mobile.png" alt="mobile_menu"></a></li>
             </ul>
         </div>
     </header>
+    <nav>
+        <div id="only_mobile_menu">
+            <p id="close_mobile_menu">X</p>
+            <ul>
+                <li><a href="#" id="go_schedule_mobile">Schedule</a></li>
+                <li><a href="#" id="go_program_mobile">Program</a></li>
+                <li><a href="#" id="go_trainer_mobile">Trainer</a></li>
+                <li><a href="#" id="go_price_mobile">Price</a></li>
+                <li><a href="#" id="go_story_mobile">Story</a></li>
+                <li><a href="#" id="go_event_mobile">Event</a></li>
+            </ul>
+        </div>
+    </nav>
     <main>
         <div id="main1">
             <div id="main_message">
@@ -65,6 +78,7 @@
                 <p class="typing-txt">GROUP_Fitness OPEN </p>
                 <p class="typing"></p> 
             </div>
+            <div id="go_schedule"></div>
         </div>
         <div id="main2">
             <div id="cut"></div>
@@ -168,6 +182,7 @@
             </div>
         </div>
         <div id="main3">
+            <div id="go_program"></div>
             <div id="main3_message">
                 <h2>Program</h2>
                 <p>Get the Best Effect Through Various Exercise Programs</p>
@@ -286,6 +301,7 @@
                     </div>
                 </div>
             </div>
+            <div id="go_story"></div>
         </div>
         <div id="main6">
             <div id="review">
@@ -369,7 +385,6 @@
     document.querySelector('#logo').style.background = "url(images/logo_Fitness.png) no-repeat";
     document.querySelector('#logo').style.backgroundSize ="cover";
     window.addEventListener('scroll',()=>{
-    // console.log('스크롤');
     if(document.querySelector('html').scrollTop > 0) {
         document.querySelector('#header').style.backgroundColor = "#fff";
         document.querySelector('#header_menu').style.margin = "15px auto";
@@ -394,6 +409,89 @@
         }
             });
     </script>
+    <!-- home(위쪽 화살표) 눌러서 최상단으로 부드럽게 이동 -->
+    <script>
+        document.querySelector('#home').addEventListener('click',(e) =>{
+                scrollTo({
+                    top:0,
+                    behavior:'smooth'
+                });
+            });
+    </script>
+    <!-- 상단 Header menu 작동 jQuery-->
+    <script>
+        // 모바일
+        mobile_menu.addEventListener('click',()=>{
+                document.querySelector('#only_mobile_menu').style.right = "0";
+                document.querySelector('#only_mobile_menu').style.visibility ="visible"
+            });
+        close_mobile_menu.addEventListener('click',()=>{
+                document.querySelector('#only_mobile_menu').style.right = "-100vw";
+                document.querySelector('#only_mobile_menu').style.visibility ="hidden"
+            });
+        $("#go_schedule_mobile").click(function() {
+            document.querySelector('#only_mobile_menu').style.right = "-100vw";
+            document.querySelector('#only_mobile_menu').style.visibility ="hidden"
+        $('html, body').animate({
+            scrollTop: $("#go_schedule").offset().top
+        }, 1500);
+        });
+        $("#go_program_mobile").click(function() {
+            document.querySelector('#only_mobile_menu').style.right = "-100vw";
+            document.querySelector('#only_mobile_menu').style.visibility ="hidden"
+        $('html, body').animate({
+            scrollTop: $("#go_program").offset().top
+        }, 1500);
+        });
+        $("#go_trainer_mobile").click(function() {
+            document.querySelector('#only_mobile_menu').style.right = "-100vw";
+            document.querySelector('#only_mobile_menu').style.visibility ="hidden"
+        $('html, body').animate({
+            scrollTop: $("#cut2").offset().top
+        }, 1500);
+        });
+        $("#go_price_mobile").click(function() {
+            document.querySelector('#only_mobile_menu').style.right = "-100vw";
+            document.querySelector('#only_mobile_menu').style.visibility ="hidden"
+        $('html, body').animate({
+            scrollTop: $("#main5_message").offset().top
+        }, 1500);
+        });
+        $("#go_story_mobile").click(function() {
+            document.querySelector('#only_mobile_menu').style.right = "-100vw";
+            document.querySelector('#only_mobile_menu').style.visibility ="hidden"
+        $('html, body').animate({
+            scrollTop: $("#review").offset().top-80
+        }, 1500);
+        });
+        // pc 
+        $("#go_schedule_pc").click(function() {
+        $('html, body').animate({
+            scrollTop: $("#go_schedule").offset().top
+        }, 1500);
+        });
+        $("#go_program_pc").click(function() {
+        $('html, body').animate({
+            scrollTop: $("#main3").offset().top
+        }, 1500);
+        });
+        $("#go_trainer_pc").click(function() {
+        $('html, body').animate({
+            scrollTop: $("#cut2").offset().top
+        }, 1500);
+        });
+        $("#go_price_pc").click(function() {
+        $('html, body').animate({
+            scrollTop: $("#main5_message").offset().top
+        }, 1500);
+        });
+        $("#go_story_pc").click(function() {
+        $('html, body').animate({
+            scrollTop: $("#go_story").offset().top
+        }, 1500);
+        });
+    </script>
+
     <!-- main1 h1 타이핑 jQuery-->
     <script>
         var typingBool = false; 
@@ -522,7 +620,6 @@
 			center: new kakao.maps.LatLng(37.5659, 126.9851),
 			level: 3
 		};
-
 		var map = new kakao.maps.Map(container, options);
 	</script>
 </body>

@@ -13,7 +13,12 @@ header div ul #logo{background:url(images/logo_Fitness.png) no-repeat; backgroun
 header div ul #logo a{display:grid; width:100%; height:100%; grid-column:2/3;}
 header div ul #mobile_menu{grid-column:4/5;}
 header div ul .pc_menu{display:none;}
-
+nav #only_mobile_menu{position:fixed; top:0; right:-100vw;width:100vw; height:100vh; background-color: #fff; z-index:10000; transition:0.5s; visibility: hidden;}
+nav #only_mobile_menu #close_mobile_menu{width: 15vw; height:15vw; font-size:15vw; margin:0; margin-left:20px; margin-top: 20px; line-height:15vw; border:5px solid #00a8ff; border-radius:50%; color:#00a8ff;}
+nav #only_mobile_menu ul{list-style: none; margin:10vh 0 40vh; padding:0;}
+nav #only_mobile_menu ul li{margin: 50px;}
+nav #only_mobile_menu ul a{text-decoration-line:none; color:#00a8ff; font-size: 30px; text-transform:uppercase;}
+nav #only_mobile_menu ul #go_event_mobile{ padding:5px; background:#00a8ff; color: #fff;}
 main #main1{
     background-image: url("../images/header.jpg"); height: 1100px; background-position:20% 30%; background-repeat: no-repeat; 
     background-size: cover; z-index:1;
@@ -34,6 +39,7 @@ main #main1 #main_message p:nth-child(3){margin:0; font-size: 36px; font-weight:
     50%{border-right: 3px solid transparent;  padding-right:10px;} 
     100%{border-right: 3px solid #00a8ff;  padding-right:10px;} 
 }
+main #main1 #go_schedule{position:absolute; top:550px;}
 
 main #main2{position:relative; color:white;}
 main #main2 #cut{
@@ -51,12 +57,12 @@ main #main2 #main2_info #schedule{
 main #main2 #main2_info #schedule #schedule_top{display:grid; align-items:center; justify-items:center;font-size: 22px; grid-template-columns: 25px 100px 1fr 110px 25px;}
 main #main2 #main2_info #schedule #schedule_top #schedule_top_left{grid-column:2/3}
 main #main2 #main2_info #schedule #schedule_top #schedule_button {grid-column:4/5}
-main #main2 #main2_info #schedule #schedule_detail{width:300%; grid-template-columns:repeat(3,100%); height:220px; display:grid; transition:1s;}
+main #main2 #main2_info #schedule #schedule_detail{width:100%; grid-template-columns:repeat(3,100%); height:220px; display:grid; transition:0.5s;}
 main #main2 #main2_info #schedule #schedule_button ul{padding:0; list-style:none; width:100%; display:flex;}
 main #main2 #main2_info #schedule #schedule_button ul li{width:10px; height:10px; border: 3px solid #fff;  margin: 10px;}
 main #main2 #main2_info #schedule #schedule_top #schedule_button ul li:nth-child(1){background-color: #fff;}
 main #main2 #main2_info #schedule #schedule_top #schedule_button ul li:hover{background-color: #fff;}
-main #main2 #main2_info #schedule #schedule_detail #schedule_1{height: 220px; border-bottom:1px solid #fff;display:grid; grid-template-rows: 75px repeat(3,1fr);width:33.3%; font-size:18px; align-items:end; grid-column:1/2;}
+main #main2 #main2_info #schedule #schedule_detail #schedule_1{height: 220px; border-bottom:1px solid #fff;display:grid; grid-template-rows: 75px repeat(3,1fr);width:100%; font-size:18px; align-items:end; grid-column:1/2;}
 main #main2 #main2_info #schedule #schedule_detail #schedule_1 div:nth-child(1){grid-row:2/3; display:grid; grid-template-columns: 25px 100px 1fr 110px 25px;border-bottom:1px solid white; height:40px;}
 main #main2 #main2_info #schedule #schedule_detail #schedule_1 div:nth-child(1) span:nth-child(1){display:grid;grid-column:2/3;}
 main #main2 #main2_info #schedule #schedule_detail #schedule_1 div:nth-child(1) span:nth-child(2){display:grid;grid-column:4/5;}
@@ -66,7 +72,7 @@ main #main2 #main2_info #schedule #schedule_detail #schedule_1 div:nth-child(2) 
 main #main2 #main2_info #schedule #schedule_detail #schedule_1 div:nth-child(3){grid-row:4/5;display:grid; grid-template-columns: 25px 100px 1fr 110px 25px;border-bottom:1px solid white; height:40px;}
 main #main2 #main2_info #schedule #schedule_detail #schedule_1 div:nth-child(3) span:nth-child(1){display:grid;grid-column:2/3;}
 main #main2 #main2_info #schedule #schedule_detail #schedule_1 div:nth-child(3) span:nth-child(2){display:grid;grid-column:4/5;}
-main #main2 #main2_info #schedule #schedule_detail #schedule_2{height: 220px; border-bottom:1px solid #fff;display:grid; grid-template-rows: 75px repeat(3,1fr);width:33.3%; font-size:18px; align-items:end; grid-column:2/3; visibility: hidden;}
+main #main2 #main2_info #schedule #schedule_detail #schedule_2{height: 220px; border-bottom:1px solid #fff;display:grid; grid-template-rows: 75px repeat(3,1fr);width:100%; font-size:18px; align-items:end; grid-column:2/3; visibility: hidden;}
 main #main2 #main2_info #schedule #schedule_detail #schedule_2 div:nth-child(1){grid-row:2/3; display:grid; grid-template-columns: 25px 100px 1fr 110px 25px;border-bottom:1px solid white; height:40px;}
 main #main2 #main2_info #schedule #schedule_detail #schedule_2 div:nth-child(1) span:nth-child(1){display:grid;grid-column:2/3;}
 main #main2 #main2_info #schedule #schedule_detail #schedule_2 div:nth-child(1) span:nth-child(2){display:grid;grid-column:4/5;}
@@ -76,7 +82,7 @@ main #main2 #main2_info #schedule #schedule_detail #schedule_2 div:nth-child(2) 
 main #main2 #main2_info #schedule #schedule_detail #schedule_2 div:nth-child(3){grid-row:4/5;display:grid; grid-template-columns: 25px 100px 1fr 110px 25px;border-bottom:1px solid white; height:40px;}
 main #main2 #main2_info #schedule #schedule_detail #schedule_2 div:nth-child(3) span:nth-child(1){display:grid;grid-column:2/3;}
 main #main2 #main2_info #schedule #schedule_detail #schedule_2 div:nth-child(3) span:nth-child(2){display:grid;grid-column:4/5;}
-main #main2 #main2_info #schedule #schedule_detail #schedule_3{height: 220px; border-bottom:1px solid #fff;display:grid; grid-template-rows: 75px repeat(3,1fr);width:33.3%; font-size:18px; align-items:end; grid-column:3/4; visibility: hidden;}
+main #main2 #main2_info #schedule #schedule_detail #schedule_3{height: 220px; border-bottom:1px solid #fff;display:grid; grid-template-rows: 75px repeat(3,1fr);width:100%; font-size:18px; align-items:end; grid-column:3/4; visibility: hidden;}
 main #main2 #main2_info #schedule #schedule_detail #schedule_3 div:nth-child(1){grid-row:2/3; display:grid; grid-template-columns: 25px 100px 1fr 110px 25px;border-bottom:1px solid white; height:40px;}
 main #main2 #main2_info #schedule #schedule_detail #schedule_3 div:nth-child(1) span:nth-child(1){display:grid;grid-column:2/3;}
 main #main2 #main2_info #schedule #schedule_detail #schedule_3 div:nth-child(1) span:nth-child(2){display:grid;grid-column:4/5;}
@@ -128,22 +134,23 @@ main #main2 #main2_info #customer{
 main #main2 #main2_info #customer #customer_top{display:grid; align-items:center; justify-items:start;font-size: 22px; grid-template-columns: 25px 220px 1fr 110px 25px;}
 main #main2 #main2_info #customer #customer_top #customer_top_left{grid-column:2/3; }
 main #main2 #main2_info #customer #customer_top #customer_button {grid-column:4/5}
-main #main2 #main2_info #customer #customer_detail{width:300%; height:220px; transition:1s; display:grid; grid-template-columns:repeat(3,100%);}
+main #main2 #main2_info #customer #customer_detail{width:100%; height:220px; transition:0.5s; display:grid; grid-template-columns:repeat(3,100%);}
 main #main2 #main2_info #customer #customer_button ul{padding:0; list-style:none; width:100%; display:flex;}
 main #main2 #main2_info #customer #customer_button ul li{width:10px; height:10px; border: 3px solid #fff;  margin: 10px;}
 main #main2 #main2_info #customer #customer_top #customer_button ul li:nth-child(1){background-color: #fff;}
 main #main2 #main2_info #customer #customer_top #customer_button ul li:hover{background-color: #fff;}
-main #main2 #main2_info #customer #customer_detail #customer_1{width:33.3%; height: 220px; grid-column:1/2;display:grid; grid-template: 75px repeat(2,1fr)/ 25px 1fr 25px; font-size:18px; justify-items:start; align-items:center; }
+main #main2 #main2_info #customer #customer_detail #customer_1{width:100%; height: 220px; grid-column:1/2;display:grid; grid-template: 75px repeat(2,1fr)/ 25px 1fr 25px; font-size:18px; justify-items:start; align-items:center; }
 main #main2 #main2_info #customer #customer_detail #customer_1 div:nth-child(1){grid-row:2/3; grid-column:2/3;display:grid; font-size: 24px;}
 main #main2 #main2_info #customer #customer_detail #customer_1 div:nth-child(2){grid-row:3/4;display:grid; grid-column:2/3; font-size: 18px;}
-main #main2 #main2_info #customer #customer_detail #customer_2{width:33.3%; height: 220px; grid-column:2/3; display:grid; grid-template: 75px repeat(2,1fr)/ 25px 1fr 25px; font-size:18px; justify-items:start; align-items:center; }
+main #main2 #main2_info #customer #customer_detail #customer_2{width:100%; height: 220px; grid-column:2/3; display:grid; grid-template: 75px repeat(2,1fr)/ 25px 1fr 25px; font-size:18px; justify-items:start; align-items:center; }
 main #main2 #main2_info #customer #customer_detail #customer_2 div:nth-child(1){grid-row:2/3; grid-column:2/3;display:grid; font-size: 24px;}
 main #main2 #main2_info #customer #customer_detail #customer_2 div:nth-child(2){grid-row:3/4;display:grid; grid-column:2/3; font-size: 18px;}
-main #main2 #main2_info #customer #customer_detail #customer_3{width:33.3%; height: 220px; grid-column:3/4; display:grid; grid-template: 75px repeat(2,1fr)/ 25px 1fr 25px; font-size:18px; justify-items:start; align-items:center; }
+main #main2 #main2_info #customer #customer_detail #customer_3{width:100%; height: 220px; grid-column:3/4; display:grid; grid-template: 75px repeat(2,1fr)/ 25px 1fr 25px; font-size:18px; justify-items:start; align-items:center; }
 main #main2 #main2_info #customer #customer_detail #customer_3 div:nth-child(1){grid-row:2/3; grid-column:2/3;display:grid; font-size: 24px;}
 main #main2 #main2_info #customer #customer_detail #customer_3 div:nth-child(2){grid-row:3/4;display:grid; grid-column:2/3; font-size: 18px;}
 
 main #main3{position:relative;}
+main #main3 #go_program{position:absolute; top:750px; left:50%;transform:translate(-50%,0);}
 main #main3 #main3_message{
     position:absolute;top:900px;left:50%;transform:translate(-50%,0); width: 90vw;
 }
@@ -293,6 +300,7 @@ main #main5 #main5_info #body_up_price div:nth-child(2):hover a{color:#1da9fc}
 main #main5 #main5_info #body_up_price div:nth-child(3){grid-row:4/5;  grid-column:2/3;}
 main #main5 #main5_info #body_up_price div:nth-child(3) ul{list-style-type:square;font-size:18px; padding-left:30px;text-align:left;}
 main #main5 #main5_info #body_up_price div:nth-child(3) ul li{margin:10px 0;}
+main #main5 #go_story{position:absolute; top:3220px;}
 main #main6 {position:relative; background-color: #1da9fc; top:6500px; height:340px;}
 main #main6 #review {position:absolute; background-color: #1da9fc; display:grid; width:300%; height:240px; grid-template:40px 200px/repeat(3,100%); transition:0.5s; }
 main #main6 #review div img{padding-top:30px;}
