@@ -23,4 +23,4 @@ https://github.com/ahfo0/2022-Portfolio
 
 ### 보완 예정
 
-- 버튼 이벤트 추가
+- 이미지 로딩방식 개선
