@@ -21,3 +21,4 @@ https://github.com/ahfo0/2022-Portfolio
 - 4차 수정 : 2022.02.14 (레이아웃 변경 및 클릭, 스크롤 이벤트 스크립트, 타이핑효과 추가)
 - 5차 수정 : 2022.02.15 (모바일 사이드바 추가 및 헤더메뉴 스크롤 이벤트 개선)
 - 6차 수정 : 2022.03.03 (hover image 프리로드 js, jQuery CDN에서 로컬방식으로 변경)
+- 7차 수정 : 2022.03.14 (membership: hover transition 수정)
