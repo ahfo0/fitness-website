@@ -160,40 +160,34 @@ main #main3 #main3_info{ position:absolute;top:1100px;left:50%;transform:transla
 main #main3 #main3_info div p{color:#a99da6; }
 main #main3 #main3_info #cross_fit{border:1px solid #ddd; height:300px; margin:80px 0; z-index:1; display:grid; grid-template: 55px 55px 80px 55px 55px / 35px 1fr 35px;place-items: center; transition:0.6s;}
 main #main3 #main3_info #cross_fit:hover{border:1px solid #00a8ff;}
-main #main3 #main3_info #cross_fit #cross_fit_figure{width:66px; height:80px; z-index:10;grid-row:2/3; grid-column:2/3; transition:0.3s;}
-main #main3 #main3_info #cross_fit h2{grid-row:4/5; grid-column:2/3; transition:0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);}
-main #main3 #main3_info #cross_fit p{ grid-row:5/6; grid-column:2/3; font-size:20px; transition-property: all;
-    transition-duration: 0.6s;
-    transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
-    transition-delay: 0s;
-    transform: scale(0);}
+main #main3 #main3_info #cross_fit #cross_fit_figure{width:66px; height:80px; z-index:10;grid-row:2/3; grid-column:2/3; transition:all 0.3s ease;}
+main #main3 #main3_info #cross_fit h2{grid-row:4/5; grid-column:2/3; transition:all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);}
+main #main3 #main3_info #cross_fit p{ grid-row:4/5;grid-column:2/3; font-size:20px;
+    transition:all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    transform: translateY(-70px) scale(0);}
 main #main3 #main3_info #cross_fit:hover #cross_fit_figure{transform: translateY(-100px);}
-main #main3 #main3_info #cross_fit:hover h2{transform: translateY(-130px)}
-main #main3 #main3_info #cross_fit:hover p{display:grid; grid-row:4/5;grid-column:2/3; transform:translateY(-70px) scale(1);}
-main #main3 #main3_info #body_up{border:1px solid #ddd; height:300px; margin:80px 0; z-index:1; display:grid; grid-template: 55px 55px 80px 55px 55px / 35px 1fr 35px;place-items: center;  transition:0.6s;}
+main #main3 #main3_info #cross_fit:hover h2{transform: translateY(-130px);}
+main #main3 #main3_info #cross_fit:hover p{display:grid; transform: translateY(-70px) scale(1);}
+main #main3 #main3_info #body_up{border:1px solid #ddd; height:300px; margin:80px 0; z-index:1; display:grid; grid-template: 55px 55px 80px 55px 55px / 35px 1fr 35px;place-items: center;  transition:0.6s; }
 main #main3 #main3_info #body_up:hover{border:1px solid #00a8ff;}
-main #main3 #main3_info #body_up #body_up_figure{width:66px; height:80px; z-index:10;grid-row:2/3; grid-column:2/3; transition:0.3s;}
-main #main3 #main3_info #body_up h2{grid-row:4/5; grid-column:2/3;  transition:0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);}
-main #main3 #main3_info #body_up p{ grid-row:5/6; grid-column:2/3; font-size:20px; transition-property: all;
-    transition-duration: 0.6s;
-    transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
-    transition-delay: 0s;
-    transform: scale(0);}
+main #main3 #main3_info #body_up #body_up_figure{width:66px; height:80px; z-index:10;grid-row:2/3; grid-column:2/3; transition:all 0.3s ease;}
+main #main3 #main3_info #body_up h2{grid-row:4/5; grid-column:2/3;  transition:all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);}
+main #main3 #main3_info #body_up p{grid-row:4/5;grid-column:2/3; font-size:20px; transition-property: all;
+    transition:all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    transform: translateY(-70px) scale(0);}
 main #main3 #main3_info #body_up:hover #body_up_figure{transform: translateY(-100px)}
 main #main3 #main3_info #body_up:hover h2{transform: translateY(-130px)}
-main #main3 #main3_info #body_up:hover p{ display:grid;  grid-row:4/5;grid-column:2/3; transform:translateY(-70px) scale(1);}
-main #main3 #main3_info #running{border:1px solid #ddd; height:300px; margin:80px 0; z-index:1; display:grid; grid-template: 55px 55px 80px 55px 55px / 35px 1fr 35px;place-items: center; transition:0.6s;}
+main #main3 #main3_info #body_up:hover p{display:grid;  transform:translateY(-70px) scale(1);}
+main #main3 #main3_info #running{border:1px solid #ddd; height:300px; margin:80px 0; z-index:1; display:grid; grid-template: 55px 55px 80px 55px 55px / 35px 1fr 35px;place-items: center; transition:all 0.6s;}
 main #main3 #main3_info #running:hover{border:1px solid #00a8ff;}
-main #main3 #main3_info #running #running_figure{width:66px; height:80px; z-index:10;grid-row:2/3; grid-column:2/3; transition:0.3s;} 
-main #main3 #main3_info #running h2{grid-row:4/5; grid-column:2/3; transition:0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);}
-main #main3 #main3_info #running p{ grid-row:5/6; grid-column:2/3; font-size:20px; transition-property: all;
-    transition-duration: 0.6s;
-    transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
-    transition-delay: 0s;
-    transform: scale(0);}
+main #main3 #main3_info #running #running_figure{width:66px; height:80px; z-index:10;grid-row:2/3; grid-column:2/3; transition:all 0.3s ease;} 
+main #main3 #main3_info #running h2{grid-row:4/5; grid-column:2/3; transition:all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);}
+main #main3 #main3_info #running p{grid-row:4/5;grid-column:2/3; font-size:20px; transition-property: all;
+    transition:all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    transform: translateY(-70px) scale(0);}
 main #main3 #main3_info #running:hover #running_figure{transform: translateY(-95px)}
 main #main3 #main3_info #running:hover h2{transform: translateY(-130px)}
-main #main3 #main3_info #running:hover p{ display:grid;  grid-row:4/5;grid-column:2/3; transform:translateY(-70px) scale(1);}
+main #main3 #main3_info #running:hover p{ display:grid; transform:translateY(-70px) scale(1);}
 
 main #main4 {position:relative;}
 main #main4 #cut2{

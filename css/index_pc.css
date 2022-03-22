@@ -29,19 +29,22 @@ main #main3 #main3_message p{font-size:24px; font-weight:300; color:#a99da6;marg
 main #main3 #main3_info{ position:absolute;top:500px;left:50%;transform:translate(-50%,0);width:1170px; height:500px; display:grid; grid-template-columns:1fr 30px 1fr 30px 1fr;  justify-content: space-around;}
 main #main3 #main3_info #cross_fit{width:370px; grid-column:1/2}
 main #main3 #main3_info #cross_fit #cross_fit_figure{width:60px; height:60px;}
+main #main3 #main3_info #cross_fit p{transform:translateY(-20px) scale(0)}
 main #main3 #main3_info #cross_fit:hover #cross_fit_figure{transform: translateY(-100px)}
 main #main3 #main3_info #cross_fit:hover h2{transform: translateY(-110px)}
-main #main3 #main3_info #cross_fit:hover p{ transform:translateY(-20px)}
+main #main3 #main3_info #cross_fit:hover p{ transform:translateY(-20px) scale(1)}
 main #main3 #main3_info #body_up{width:370px; grid-column:3/4}
 main #main3 #main3_info #body_up #body_up_figure{width:60px; height:60px;}
+main #main3 #main3_info #body_up p{ transform:translateY(-20px) scale(0)}
 main #main3 #main3_info #body_up:hover #body_up_figure{transform: translateY(-90px)}
 main #main3 #main3_info #body_up:hover h2{transform: translateY(-110px)}
-main #main3 #main3_info #body_up:hover p{ transform:translateY(-20px)}
+main #main3 #main3_info #body_up:hover p{ transform:translateY(-20px) scale(1)}
 main #main3 #main3_info #running{width:370px; grid-column:5/6}
 main #main3 #main3_info #running #running_figure{width:60px; height:60px;}
+main #main3 #main3_info #running p{ transform:translateY(-10px) scale(0)}
 main #main3 #main3_info #running:hover #running_figure{transform: translateY(-85px)}
 main #main3 #main3_info #running:hover h2{transform: translateY(-100px)}
-main #main3 #main3_info #running:hover p{ transform:translateY(-10px)}
+main #main3 #main3_info #running:hover p{ transform:translateY(-10px) scale(1)}
 main #main4 #cut2{top:1000px; height:1200px;}
 main #main4 #main4_message{top:1200px;left:50%;transform:translate(-50%,0); width: 90vw; z-index:10;}
 main #main4 #main4_message h2{font-size:48px; font-weight:500; margin-bottom:10px;}
