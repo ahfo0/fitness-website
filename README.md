@@ -23,3 +23,4 @@ https://github.com/ahfo0/2022-Portfolio
 - 6차 수정 : 2022.03.03 (hover image 프리로드 js, jQuery CDN에서 로컬방식으로 변경)
 - 7차 수정 : 2022.03.14 (membership: hover transition 수정)
 - 8차 수정 : 2022.03.17 (index.html 문서 내부의 script 별도 분리)
+- 9차 수정 : 2022.03.22 (일부 hover effect 부드럽게 수정)
